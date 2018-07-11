@@ -9,18 +9,6 @@
 {'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
 {'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
   
-  /*var TeamLeader = 
-  {
-      name:"dds",
-      age:5
-   };
-  var anotherOccupation = 
-   {
-        name:"ccdsac",
-        age:7
-   };*/
-   
-  
   for(var i=0;i<myObj.length;i++){
     prog=myObj[i];
     if(prog.occupation==="Programmer")
@@ -32,14 +20,19 @@
 	})
   console.log(myObj);
   
-  //not working as of now as requested
-  const arrayToObject = (array, keyField) =>
-   array.reduce((obj, item) => {
-     obj[item[keyField]] = item
-     return obj
-   }, {})
-	const peopleObject = arrayToObject(myObj, "occupation")
-	console.log(peopleObject);
+  var newObj={}
+	for (var z of myObj){
+    newObj[z['occupation']]=[];
+	}
+	for (var z of myObj){
+    newObj[z['occupation']].push(z);
+	}
+	for (var k in newObj){
+    for (var l of newObj[k]){
+          delete l['occupation']
+    }
+	}
+	console.log(newObj)
   
   var newName = [];
 	myObj.map(data => newName.push(data.name));
