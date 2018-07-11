@@ -1,0 +1,8 @@
+(function(){
+	var a = ["Ram","Sham","Aman","Dwivedi","Trivedi","Gaitonde"];
+  a.sort();
+  console.log(a);
+  a.reverse();
+  console.log(a);
+}
+());

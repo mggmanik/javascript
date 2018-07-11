@@ -1,0 +1,17 @@
+(function(){
+
+  function mailCorrect(mail){
+  var mailPattern = /^[a-zA-Z]{1,}[0-9]?([\.\_-]?[a-zA-Z0-9]+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	if(mailPattern.test(mail))
+    {
+      console.log("Valid");
+    }
+    else
+    {
+     	console.log("Invalid"); 
+    }
+  }
+  
+  mailCorrect("mggmanik@gmail.com");
+}
+());

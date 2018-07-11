@@ -1,0 +1,11 @@
+(function(){
+	var a = [5,1,7,9,2];
+  var large = 0;
+  for(var i=0;i<a.length;i++){
+    if(a[i]>large){
+      large=a[i];
+    }
+  }
+    console.log(large);
+  }
+());

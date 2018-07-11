@@ -1,0 +1,10 @@
+(function(){
+	
+  var str = "webmaster";
+  var strSort = Array.from(str);
+  strSort.sort();
+  console.log(str); 
+  console.log(strSort.join(""));
+  
+}
+());
