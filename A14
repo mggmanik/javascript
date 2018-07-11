@@ -9,7 +9,7 @@
 {'name':'Krishnakath', 'age': 22, 'occupation': "Programmer"},
 {'name':'Venketraman', 'age': 28, 'occupation': "Programmer"}];
   
-  var TeamLeader = 
+  /*var TeamLeader = 
   {
       name:"dds",
       age:5
@@ -18,24 +18,31 @@
    {
         name:"ccdsac",
         age:7
-   };
+   };*/
    
-     console.log(myObj);
   
-  /*for(var i=0;i<myObj.length;i++){
+  for(var i=0;i<myObj.length;i++){
     prog=myObj[i];
     if(prog.occupation==="Programmer")
  			console.log(prog);    
   }
 	
   myObj.sort(function(a, b){
-    return a.age-b.age
+    return b.age-a.age
 	})
-  myObj.reverse();
   console.log(myObj);
   
-  */
-
+  //not working as of now as requested
+  const arrayToObject = (array, keyField) =>
+   array.reduce((obj, item) => {
+     obj[item[keyField]] = item
+     return obj
+   }, {})
+	const peopleObject = arrayToObject(myObj, "occupation")
+	console.log(peopleObject);
   
+  var newName = [];
+	myObj.map(data => newName.push(data.name));
+	console.log(newName);
 }
 ());
